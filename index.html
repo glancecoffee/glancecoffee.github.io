@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>قلانس — GLANCÉ | قهوة مختصة</title>
+<meta name="description" content="منيو قلانس — قهوة مختصة. اطلب من طاولتك.">
+<meta property="og:title" content="قلانس — GLANCÉ | قهوة مختصة">
+<meta property="og:description" content="منيو قلانس الرقمي — اختر، أضف لطلبك، وأرسله وأنت على طاولتك.">
+<meta name="theme-color" content="#FBF4EA" id="metaTheme">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FBF4EA'/%3E%3Cpath d='M40 32v9a9 9 0 0 1-9 9 9 9 0 0 1-9-9V23a9 9 0 0 1 9-9 9 9 0 0 1 9 9v3' fill='none' stroke='%23A87E5C' stroke-width='3.4' stroke-linecap='round'/%3E%3Cpath d='M40 32h-6' stroke='%23A87E5C' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Jost:wght@200;300;400;500;600&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/menu.css">
+</head>
+<body class="lock">
+
+<div id="progress"></div>
+
+<!-- ============ اللوجو (يُستعمل في السبلاش والهيرو والفوتر) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="gmark" viewBox="0 0 200 252">
+    <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <g class="rays" stroke-width="2.4">
+        <path d="M100 6v18"/>
+        <path d="M71 12l6 17"/>
+        <path d="M129 12l-6 17"/>
+        <path d="M45 25l11 15"/>
+        <path d="M155 25l-11 15"/>
+        <path d="M24 44l14 12"/>
+        <path d="M176 44l-14 12"/>
+      </g>
+      <path class="cap" d="M138 128v20a38 38 0 0 1-38 38 38 38 0 0 1-38-38V98a38 38 0 0 1 38-38 38 38 0 0 1 38 38v8"/>
+      <path class="bar" d="M138.5 128h-23"/>
+    </g>
+    <path class="spark" d="M100 94c2.1 8.4 5 11.3 13.4 13.4-8.4 2.1-11.3 5-13.4 13.4-2.1-8.4-5-11.3-13.4-13.4 8.4-2.1 11.3-5 13.4-13.4z" fill="currentColor"/>
+    <text class="yr" x="42" y="132">20</text>
+    <text class="yr" x="158" y="132">21</text>
+    <path id="mkArc" d="M30 198Q100 244 170 198" fill="none"/>
+    <text class="arcT"><textPath href="#mkArc" startOffset="50%" text-anchor="middle">GLANCE</textPath></text>
+  </symbol>
+</svg>
+
+<!-- ============ السبلاش ============ -->
+<div id="splash" aria-hidden="true">
+  <div class="sp-box">
+    <svg class="sp-mark" viewBox="0 0 200 252"><use href="#gmark"/></svg>
+    <div class="sp-word">قلانس</div>
+    <div class="sp-en en">GLANCÉ</div>
+    <div class="sp-tag">قهوة مختصة</div>
+  </div>
+  <div class="sp-hint">المس الشاشة للدخول</div>
+</div>
+
+<!-- ============ زخارف ============ -->
+<svg class="stain a" viewBox="0 0 200 200" aria-hidden="true">
+  <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="1.6"/>
+</svg>
+<svg class="stain b" viewBox="0 0 200 200" aria-hidden="true">
+  <rect x="16" y="16" width="168" height="168" rx="84" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <rect x="34" y="34" width="132" height="132" rx="66" fill="none" stroke="currentColor" stroke-width="1.6"/>
+</svg>
+
+<!-- ============ الهيرو ============ -->
+<header id="hero">
+  <svg class="steam an" viewBox="0 0 60 46" aria-hidden="true">
+    <path class="s1" d="M15 40c-4-6 4-9 0-15"/>
+    <path class="s2" d="M30 42c-4-7 4-10 0-17"/>
+    <path class="s3" d="M45 40c-4-6 4-9 0-15"/>
+  </svg>
+
+  <div class="hero-art an">
+    <div class="arch">
+      <img id="heroImg" src="assets/img/hero.jpg" alt="" fetchpriority="high" decoding="async">
+      <div class="arch-veil"></div>
+    </div>
+  </div>
+
+  <svg class="hero-mark an" viewBox="0 0 200 252" aria-hidden="true"><use href="#gmark"/></svg>
+
+  <h1 class="wordmark an" id="wm">قلانس</h1>
+  <div class="wordmark-en en an">GLANCÉ</div>
+  <div class="tagline an">قهوة مختصة</div>
+
+  <div class="hero-cta an">
+    <button class="btn-ghost" id="heroOrder">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M4 6h2.2l2.1 9.4a2 2 0 0 0 2 1.6h6.6a2 2 0 0 0 2-1.5L20.5 9H7"/><circle cx="10.5" cy="20" r="1.1"/><circle cx="17.5" cy="20" r="1.1"/></svg>
+      اطلب من طاولتك
+    </button>
+    <a class="btn-ghost" id="igBtn" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="ic"><rect x="3" y="3" width="18" height="18" rx="5.4"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg>
+      <span id="igLbl"></span>
+    </a>
+  </div>
+
+  <div class="cue an">
+    <span>المنيو</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
+</header>
+
+<!-- ============ الشريط ============ -->
+<nav id="nav">
+  <div class="nav-in">
+    <div class="pills" id="pills"><div class="glider" id="glider"></div></div>
+    <button class="nav-ico" id="searchBtn" aria-label="بحث">
+      <svg viewBox="0 0 24 24" class="ic"><circle cx="11" cy="11" r="6.6"/><path d="M15.8 15.8L21 21"/></svg>
+    </button>
+    <button class="nav-ico" id="themeBtn" aria-label="تبديل المظهر">
+      <svg id="moonIco" viewBox="0 0 24 24" class="ic"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg>
+      <svg id="sunIco" style="display:none" viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5 5l1.6 1.6M17.4 17.4L19 19M19 5l-1.6 1.6M6.6 17.4L5 19"/></svg>
+    </button>
+  </div>
+  <div class="search-row" id="searchRow">
+    <svg viewBox="0 0 24 24" class="ic"><circle cx="11" cy="11" r="6.6"/><path d="M15.8 15.8L21 21"/></svg>
+    <input id="q" placeholder="دوّر على صنف…" autocomplete="off" spellcheck="false">
+    <button class="nav-ico sm" id="searchClose" aria-label="إغلاق البحث">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ العرض ============ -->
+<div id="offerBar" class="hide">
+  <div class="ob-in">
+    <span class="ob-dot"></span>
+    <div class="ob-txt"><b id="offT"></b><span id="offB"></span></div>
+    <div class="ob-cd" id="offCd">--:--</div>
+  </div>
+</div>
+
+<main>
+  <!-- الأكثر طلبًا -->
+  <section id="featured" class="rail-sec">
+    <div class="rail-head">
+      <h2>الأكثر طلبًا</h2>
+      <p>اللي ما يطلع من الطاولات</p>
+    </div>
+    <div class="rail" id="featRail"></div>
+  </section>
+
+  <!-- الكومبو -->
+  <section id="combos" class="rail-sec">
+    <div class="rail-head">
+      <h2>وفّر مع الكومبو</h2>
+      <p>سعر أقل لما تاخذها مع بعض</p>
+    </div>
+    <div class="rail" id="comboRail"></div>
+  </section>
+
+  <div id="menu"></div>
+  <div id="qres" class="hide"></div>
+</main>
+
+<div class="end-band">
+  <img src="assets/img/end.jpg" alt="" loading="lazy" decoding="async"
+       onerror="this.closest('.end-band').style.display='none'">
+</div>
+
+<footer>
+  <svg class="f-mark" viewBox="0 0 200 252" aria-hidden="true"><use href="#gmark"/></svg>
+  <div class="fw">قلانس</div>
+  <div class="ft en">GLANCÉ · SPECIALTY COFFEE</div>
+  <div class="flinks" id="fLinks"></div>
+  <small>صُنع بحب لعشّاق القهوة المختصة</small>
+</footer>
+
+<button id="toTop" aria-label="العودة لأعلى">
+  <svg viewBox="0 0 24 24" class="ic"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg>
+</button>
+
+<!-- ============ شريط الطلب ============ -->
+<div id="bar">
+  <button class="bar-in" id="barBtn">
+    <span class="bar-n" id="barN">0</span>
+    <span class="bar-l">شوف طلبك</span>
+    <span class="bar-p"><span id="barT">0</span><svg class="sar" viewBox="0 0 24 24" aria-label="ريال"><path d="M16.8 2.8v10c0 2.9-2.1 4.6-4.8 5l-7 1.2"/><path d="M11.4 5.6v8.6"/><path d="M4.2 10.2l15.6 2.7"/><path d="M4.2 14.6l15.6 2.7"/></svg></span>
+  </button>
+</div>
+
+<!-- ============ الشيتات ============ -->
+<div class="sheet" id="shItem"><div class="bk"></div><div class="pn"><div class="grab"></div><div class="pn-body" id="itemBody"></div></div></div>
+<div class="sheet" id="shCart"><div class="bk"></div><div class="pn"><div class="grab"></div><div class="pn-body" id="cartBody"></div></div></div>
+<div class="sheet" id="shRev"><div class="bk"></div><div class="pn"><div class="grab"></div><div class="pn-body" id="revBody"></div></div></div>
+
+<div id="toast"><span id="toastT"></span></div>
+
+<noscript><p style="text-align:center;padding:24px">فعّل الجافاسكربت لعرض المنيو.</p></noscript>
+
+<script src="data/menu.js"></script>
+<script src="data/sales.js"></script>
+<script src="assets/sys.js"></script>
+<script src="assets/menu.js"></script>
+</body>
+</html>
